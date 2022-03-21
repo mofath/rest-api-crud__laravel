@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();
             $table->bigInteger('price');
             $table->string('address');
-            $table->enum('status' , ['unpiad'  ,'piad' , 'pending' , 'canseled']);
+            $table->enum('status', ['unpiad', 'piad', 'pending', 'canseled'])->default('pending');;
             $table->timestamps();
         });
     }
